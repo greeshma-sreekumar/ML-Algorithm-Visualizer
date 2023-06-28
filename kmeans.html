@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualizer</title>
+    <link rel="stylesheet" href="style1.css" />
+    <!--  -->
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;184&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:wght@278;578&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira:wdth,wght@100,400;125,298&family=Work+Sans:wght@278;578&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;184&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira:wdth,wght@100,400;125,298&family=Work+Sans:wght@278;578&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="nav-bar">
+        <div class="logo"><h1 id="h11">ALGORITHM</h1><h1 id="h12">VISUALIZER</h1><div class="border"></div></div>
+        <ul class="nav-list">
+          <li class="nav-list-element"><a href="home.html">HOME</a></li>
+          <li class="nav-list-element"><a href="dbscan.html">DBSCAN</a></li>
+          <li class="nav-list-element"><a href="kmeans.html">K-MEANS</a></li>
+        </ul>
+      </nav>
+      <div class="dbscan-head">
+        <div class="headcard1">
+          <h1 class="dbh">K-MEANS Clustering Algorithm.</h1>
+        </div>
+        <div class="headcard1">
+          <p class="dbp">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi quis magni tenetur, sunt deleniti saepe corporis molestias dignissimos incidunt maxime iusto. Vitae nihil ipsum perspiciatis libero fuga sequi, iusto qui.</p>
+        </div>
+        
+      </div>
+      <div class="downarrow"><div class="spans"><span id="text">Swip down for demonstration</span> <span class="material-symbols-outlined">arrow_downward</span></div></div>
+      <div class="canvas-table">
+        <div class="canvas-and-buttons">
+          <canvas></canvas>
+          <div class="buttons">
+            <button class="play"><span class="material-symbols-rounded">play_arrow</span></button>
+          </div>
+        </div>
+        <div class="data-table">
+          <table id="datat"></table>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+      <div class="db">
+        <h1>What is K-Means ?</h1>
+        <p class="p">K-Means Clustering is an Unsupervised Learning Algorithm, which groups the unlabeled dataset into different clusters.
+         It's a partition based technique or centroid based technique. Segment database into groups based on similarity of datapoints.
+         K-Means performs the division of objects into clusters that share similarities and are dissimilar to the objects belonging to another cluster.
+         The main goal is to divide N observations into K clusters repeatedly until no more groups can be formed
+         The algorithm takes the unlabeled dataset as input, divides the dataset into k-number of clusters, and repeats the process until it does not find the best clusters. 
+         The value of k should be predetermined in this algorithm.<br>
+         The k-means clustering algorithm mainly performs two tasks:<br>
+          &nbsp; &nbsp;1.Determines the best value for K center points or centroids by an iterative process.<br>
+          &nbsp; &nbsp;2.Assigns each data point to its closest k-center. Those data points which are near to the particular k-center, create a cluster.<br><br>
+          Hence each cluster has data points with some commonalities, and it is away from other clusters.
+
+    </div>
+    
+        <div class="step">
+            <h2>Algorithm:</h2>
+           <ol class="list" type="1">
+             <li class="lst">Intitialize the clusters(number of clusters,k) and centroid value</li>
+            
+             <li class="lst">Select the next object and find Euclidean distance from these clusters,<br>
+                if object (xi,yj) and one cluster (xa,yb) then Euclidean distance,
+                d=√[(xi-xa)²-(yj-yb)²] 
+            </li>
+             <li class="lst">Assign object to the cluster which having lesser Euclidean distance</li>
+             <li class="lst">Update centroid value</li>
+             <li class="lst">Repeat the process untill all point are included</li>
+          </ol> 
+        </div>
+        <div class="adv">
+            <h2>Advantages:</h2>
+            <ul class="list">
+              <li class="lst">It is very easy to understand and implement.</li>
+              <li class="lst">If we have large number of variables then, K-means would be faster than density based algorithm</li>
+                
+              <li class="lst"> On re-computation of centroids, an instance can change the cluster.</li>
+              <li class="lst">Tighter clusters are formed with K-means as compared to density based algorithm</li>
+              <li class="lst">we can use large datatsets for clustering</li>
+
+            </ul>
+           </div>
+        <div class="footer">
+          <span>&#169;Miniproject of Group 13</span>
+        </div>
+    
+    <script src="kmeas.js"></script>
+  </body>
+</html>
+
